@@ -1,0 +1,80 @@
+* {
+    border: 1px solid black;
+}
+
+#top {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+}
+
+h1 {
+    display: inline-block;
+    margin: 5px;
+}
+
+.link-box {
+    margin: 5px;
+}
+
+.links-top {
+    display: inline-block;
+    margin: 5px;
+}
+
+#gap {
+    margin: 50px;
+}
+
+h2 {
+    margin: 5px;
+    text-align: right;
+}
+
+#about-me, #work, #contact-me {
+    margin: 50px;
+}
+
+h3 {
+    margin: 5px;
+    display: inline-block;
+}
+
+.me {
+    display: inline-block;
+    margin: 5px;
+}
+
+.work {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.work-title {
+    height: 100%;
+}
+
+.work-link-container {
+    display: inline-block;
+    margin: 5px;
+}
+
+.work-link {
+    margin: 5px;
+    width: 45%;
+    display: inline-block;
+}
+
+#contact-me {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info {
+    margin: 5px;
+}
+
+.info {
+    margin: 5px;
+    display: inline-block;
+}
