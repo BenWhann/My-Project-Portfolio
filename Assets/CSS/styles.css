@@ -1,80 +1,321 @@
-* {
-    border: 1px solid black;
+body {
+    border: 25px solid grey;
+    background-color:gainsboro;
 }
 
+#top, #gap, #about-me, #work, #contact-me {
+    background-color:gainsboro;
+    margin: 50px 0 50px 0;
+}
+
+/* Section 1 start */
 #top {
+    width: auto;
+    height: 100px;
     display: flex;
     justify-content: space-between;
-    margin: 50px;
+    background-image: none;
 }
 
-h1 {
-    display: inline-block;
-    margin: 5px;
+.name, .link-list, .links-top {
+    padding: 10px;
 }
 
-.link-box {
-    margin: 5px;
+.name {
+    align-self: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+}
+
+.link-list {
+    display: flex;
+    border-radius: 0 25px 0 0;
 }
 
 .links-top {
     display: inline-block;
-    margin: 5px;
+    justify-content: space-between;
+    font-size: 24px;
 }
 
+.name, .links-top {
+    text-align: center;
+}
+
+/* Section 1 end */
+
+/* Section 2 start */
 #gap {
-    margin: 50px;
+    height: 100px;
+    background-image: url(https://wallpaperaccess.com/full/1159274.jpg);
+    background-size: cover;
 }
 
-h2 {
-    margin: 5px;
+.subtitle {
+    position: relative;
+    top: 65px;
     text-align: right;
+    padding-right: 5px;
+    font-size: 24px;
+}
+/* Section 2 end */
+
+/* Section 3 start */
+#about-me {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: none;
 }
 
-#about-me, #work, #contact-me {
-    margin: 50px;
+.me-title {
+    font-size: 32px;
+    border-right: 1px solid;
+    height: 150px;
+    width: 20%;
+    text-align: right;
+    padding: 5px;
 }
 
-h3 {
-    margin: 5px;
-    display: inline-block;
+.me-container {
+    height: 150px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .me {
-    display: inline-block;
-    margin: 5px;
+    font-size: 16px;
+    padding: 50px;
 }
+/* Section 3 end */
 
-.work {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.work-title {
-    height: 100%;
-}
-
-.work-link-container {
-    display: inline-block;
-    margin: 5px;
-}
-
-.work-link {
-    margin: 5px;
-    width: 45%;
-    display: inline-block;
-}
-
-#contact-me {
+/* Section 4 start */
+#work {
     display: flex;
     justify-content: space-between;
 }
 
-.contact-info {
+.work-title {
+    font-size: 32px;
+    height: 850px;
+    border-right: 1px solid;
+    width: 20%;
+    text-align: right;
+    padding: 5px;
+}
+
+.work-link-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.work-link {
+    border: 1px solid;
+    width: 47%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-image: url(https://earlsribpalace.com/wp-content/uploads/2019/07/coming-soon-store-placeholder-image.gif);
+    background-size: 100% 100%;
     margin: 5px;
+    border-radius: 25px;
+}
+
+.work-link:first-child {
+    width: 100%;
+    height: 400px;
+}
+
+.work-link:hover {
+    border: 5px solid goldenrod;
+    cursor: pointer;
+    background-color: rgba(127, 127, 127, 0.5);
+    z-index: 2;
+}
+
+/* Section 4 end */
+
+/* Section 5 start */
+#contact-me {
+    width: auto;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    background-image: none;
+}
+
+.contact {
+    font-size: 32px;
+    border-right: 1px solid;
+    height: 150px;
+    width: 20%;
+    text-align: right;
+    padding: 5px;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 25px;
 }
 
 .info {
-    margin: 5px;
     display: inline-block;
+    font-size: 20px;
 }
+
+.contact-info, .info {
+    text-align: center;
+}
+
+/* Section 5 end */
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+    
+    #top {
+        width: auto;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        background-image: none;
+        flex-direction: column;
+    }
+
+    .name {
+        align-self: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 32px;
+    }
+    
+    .work-link:first-child {
+        width: 47%;
+        height: 200px;
+    }
+
+    .work-link-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    .contact {
+        text-align: center;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+    }
+
+    #contact-me {
+        width: auto;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: none;
+        line-break: unset;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    br {
+        display: none;
+    }
+    
+    .subtitle {
+        position: relative;
+        top: 65px;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    #about-me {
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: none;
+        flex-direction: column;
+    }
+
+    .me-title {
+        font-size: 32px;
+        height: 150px;
+        width: 20%;
+        text-align: center;
+        padding: 5px;
+        border: 0;
+    }
+    
+    .me-container {
+        height: 150px;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .me {
+        font-size: 16px;
+        padding: 25px;
+        text-align: center;
+    }
+
+    #work {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-title {
+        font-size: 32px;
+        height: auto;
+        width: 20%;
+        text-align: right;
+        padding: 5px;
+        border: 0;
+    }
+
+    .work-link, .work-link:first-child {
+        border: 1px solid;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        background-image: url(https://earlsribpalace.com/wp-content/uploads/2019/07/coming-soon-store-placeholder-image.gif);
+        background-size: 100% 100%;
+        margin: 5px;
+        border-radius: 25px;
+    }
+
+
+}
+
+
+/* Media Queries End */
